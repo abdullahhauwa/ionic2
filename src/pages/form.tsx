@@ -185,8 +185,8 @@ const form: React.FC = () => {
               render={({ field }) => (
                 <IonInput
                   placeholder="Enter your name"
-                  onIonChange={(e) => field.onChange(e.detail.value!)}
-                  value={field.value}
+                  onIonInput={(e: any) => field.onChange(e.target.value!)}
+                  value={field.value || ''}
                   autocomplete="off" 
                 />
               )}
@@ -202,8 +202,8 @@ const form: React.FC = () => {
               render={({ field }) => (
                 <IonInput
                   placeholder="Enter your email"
-                  onIonChange={(e) => field.onChange(e.detail.value!)}
-                  value={field.value}
+                  onIonInput={(e: any) => field.onChange(e.target.value!)}
+                  value={field.value || ''} 
                   autocomplete="off" 
                 />
               )}
@@ -220,8 +220,8 @@ const form: React.FC = () => {
                 <IonInput
                   type="password"
                   placeholder="Enter your password"
-                  onIonChange={(e) => field.onChange(e.detail.value!)}
-                  value={field.value}
+                  onIonInput={(e: any) => field.onChange(e.target.value!)}
+                  value={field.value || ''}
                   autocomplete="new-password" 
                 />
               )}
